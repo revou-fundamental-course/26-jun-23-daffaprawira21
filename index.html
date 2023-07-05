@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-Groceries</title>
+
+    <!-- Material Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alkatra:wght@400;700&family=Poppins:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Material Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- JS Link -->
+    <script type="text/javascript" src="js/script.js"></script>
+  </head>
+  <body>
+    <!-- Navbar Start -->
+    <nav class="navbar">
+      <div class="navbar-logo">
+        <img src="img/logo.png" alt="logo" />
+      </div>
+
+      <div class="navbar-menu">
+        <a href="#">Home</a>
+        <a href="#our-package">Our Package</a>
+        <a href="#call-us">Call Us</a>
+      </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Home Start -->
+    <section class="home" id="home">
+      <h1>Top Rated E-Groceries Shop In <br />Indonesia</h1>
+      <h2>Every Day with best ingredients</h2>
+    </section>
+    <!-- Home End -->
+
+    <div class="row">
+      <!-- Content Review Start -->
+      <section class="content">
+        <!-- <div class="review"> -->
+        <div class="slide-img">
+          <img src="img/1.jpg" alt="Review" />
+          <h3>"Setiap hari beli sayur buah yang fresh disini."</h3>
+        </div>
+
+        <div class="customer">
+          <i data-feather="user" class="user"></i>
+          <div class="identitas-customer">
+            <h3>Ananda Daffa Prawira</h3>
+            <p>Mahasiswa, 21</p>
+          </div>
+        </div>
+        <!-- </div> -->
+      </section>
+      <!-- Content Review End -->
+
+      <!-- Form Start -->
+      <section class="forms">
+        <!-- <div class="form-section"> -->
+        <form
+          class="customer-form"
+          name="customer-form"
+          onsubmit="return validateForm()"
+        >
+          <h3>Contact Us</h3>
+          <p>Sales akan menghubungi anda 1x24 jam setelah data kami terima.</p>
+          <label for="name">Name:</label>
+          <input type="text" name="name" placeholder="First and last name" />
+
+          <label for="email">Email Address:</label>
+          <input type="text" name="email" placeholder="example@gmail.com" />
+
+          <label for="interest">What are you interested in?</label>
+          <select id="interest" name="interest">
+            <option value="" hidden>Select option</option>
+            <option value="vegetables">Vegetables</option>
+            <option value="fruits">Fruits</option>
+            <option value="milk">Milk</option>
+          </select>
+
+          <span><input type="submit" value="Send" /></span>
+        </form>
+        <!-- </div> -->
+      </section>
+      <!-- Form End -->
+    </div>
+
+    <!-- Our Package Start -->
+    <section class="our-package">
+      <p>
+        Use this space to provide users with more information about your offer.
+        Consider it a follow-up to your headline and explain the benefits of
+        your service or product
+      </p>
+      <ul>
+        <li>
+          Your first feature, written in the form of a benefits statement.
+        </li>
+        <li>
+          Your second feature, written in the form of a benefits statement.
+        </li>
+        <li>
+          Your third feature, written in the form of a benefits statement.
+        </li>
+      </ul>
+    </section>
+    <!-- Our Package End -->
+
+    <!-- Feather Icons -->
+    <script>
+      feather.replace();
+    </script>
+  </body>
+</html>
