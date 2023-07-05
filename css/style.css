@@ -14,7 +14,7 @@ html {
 
 body {
   font-family: "Poppins", Verdana, Sans-serif;
-  min-height: 2000px;
+  /* min-height: 2000px; */
 }
 /* Navigation Start */
 .navbar {
@@ -100,7 +100,7 @@ body {
 
 .row .content {
   display: inline-block;
-  width: 57%;
+  max-width: 57%;
 }
 
 .row .content .slide-img,
@@ -150,7 +150,7 @@ body {
 /* Forms Start */
 .row .forms {
   display: flex;
-  width: 43%;
+  max-width: 43%;
 }
 
 .row .forms .customer-form {
@@ -204,3 +204,40 @@ body {
   background-color: #010101;
 }
 /* Forms End */
+
+/* Our Package Start */
+.our-package {
+  display: inline-block;
+  width: 57%;
+}
+
+.our-package .container {
+  display: block;
+}
+
+.our-package .container .benefit {
+  display: flex;
+  padding: 16px 96px;
+  align-items: center;
+}
+
+.our-package .container .benefit .number {
+  padding: 8px;
+  height: 52px;
+  width: 52px;
+  border-radius: 52px;
+  background-color: #eeeeee;
+  color: #a1a1a1;
+  text-align: center;
+  font-size: 26px;
+}
+
+.our-package .service {
+  display: inline-block;
+  margin: 24px 24px 24px 32px;
+}
+
+.our-package .service p {
+  text-align: left;
+}
+/* Our Package End */
