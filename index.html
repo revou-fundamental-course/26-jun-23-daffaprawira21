@@ -49,10 +49,19 @@
       <section class="content">
         <!-- <div class="review"> -->
         <div class="slide-img">
-          <img src="img/1.jpg" alt="Review" />
+          <div class="show-img">
+            <img src="img/1.jpg" />
+          </div>
+          <div class="show-img" style="display: none">
+            <img src="img/2.jpg" />
+          </div>
+          <div class="show-img" style="display: none">
+            <img src="img/3.jpg" />
+          </div>
+          <button onclick="plusDivs(-1)" class="button">Previous</button>
+          <button onclick="plusDivs(1)" class="button">Next</button>
           <h3>"Setiap hari beli sayur buah yang fresh disini."</h3>
         </div>
-
         <div class="customer">
           <i data-feather="user" class="user"></i>
           <div class="identitas-customer">
@@ -65,7 +74,7 @@
       <!-- Content Review End -->
 
       <!-- Form Start -->
-      <section class="forms">
+      <section class="forms" id="call-us">
         <!-- <div class="form-section"> -->
         <form
           class="customer-form"
@@ -103,35 +112,55 @@
           offer. Consider it a follow-up to your headline and explain the
           benefits of your service or product.
         </p>
+
+        <div class="container">
+          <div class="benefit">
+            <h3 class="number">1</h3>
+            <div class="feature">
+              <p>
+                Your first feature, written in the form <br />
+                of a benefits statement.
+              </p>
+            </div>
+          </div>
+          <div class="benefit">
+            <h3 class="number">2</h3>
+            <div class="feature">
+              <p>
+                Your second feature, written in the form <br />
+                of a benefits statement.
+              </p>
+            </div>
+          </div>
+          <div class="benefit">
+            <h3 class="number">3</h3>
+            <div class="feature">
+              <p>
+                Your third feature, written in the form <br />
+                of a benefits statement.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="container">
-        <div class="benefit">
-          <h3 class="number">1</h3>
-          <div class="feature">
-            <p>
-              Your first feature, written in the form of a benefits statement.
-            </p>
-          </div>
-        </div>
-        <div class="benefit">
-          <h3 class="number">2</h3>
-          <div class="feature">
-            <p>
-              Your first feature, written in the form of a benefits statement.
-            </p>
-          </div>
-        </div>
-        <div class="benefit">
-          <h3 class="number">3</h3>
-          <div class="feature">
-            <p>
-              Your first feature, written in the form of a benefits statement.
-            </p>
-          </div>
-        </div>
+      <div class="page-block">
+        <!-- <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam a
+          ipsa eligendi aperiam repudiandae esse dolorem minus, tempore quae aut
+          modi, cumque natus aliquam exercitationem cum officiis veniam quis
+          beatae?
+        </p> -->
       </div>
     </section>
     <!-- Our Package End -->
+
+    <!-- Footer Start -->
+    <footer>
+      <div class="credit">
+        <p>created by <a href=""> daffaprawira</a>. | &copy; 2023.</p>
+      </div>
+    </footer>
+    <!-- Footer End -->
 
     <!-- Feather Icons -->
     <script>

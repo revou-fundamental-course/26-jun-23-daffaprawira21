@@ -25,7 +25,6 @@ body {
   border-bottom: 2px solid #dfdfdf;
   position: fixed;
   padding: 18px 32px;
-  width: 100%;
   top: 0;
   left: 0;
   right: 0;
@@ -72,7 +71,6 @@ body {
 .home {
   margin-top: 80px;
   padding: 24px 0;
-  width: 100%;
 }
 
 .home h1 {
@@ -95,28 +93,54 @@ body {
 .row {
   display: flex;
   flex-wrap: wrap;
-  width: 100%;
+  justify-content: center;
 }
 
 .row .content {
-  display: inline-block;
-  max-width: 57%;
+  display: flex;
+  flex-direction: column;
+  margin-right: 60px;
 }
 
 .row .content .slide-img,
 .row .content .customer {
-  margin: 0 32px;
   text-align: center;
 }
+
+.row .content .slide-img .show-img {
+  display: block;
+  position: relative;
+}
 .row .content .slide-img img {
-  width: 760px;
-  height: 480px;
+  width: 800px;
+  height: 440px;
   object-fit: cover;
   border-radius: 10px;
 }
+
+.row .content .slide-img .button {
+  display: inline-block;
+  background-color: #2e2e2e;
+  border: none;
+  color: #fff;
+  padding: 8px 12px;
+  width: 72px;
+  border-radius: 6px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 12px;
+  margin: 12px 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.row .content .slide-img .button:hover {
+  background-color: #010101;
+}
+
 .row .content .slide-img h3 {
   font-weight: 400;
-  font-size: 22px;
+  font-size: 20px;
   font-style: italic;
   line-height: 48px;
   color: #a1a1a1;
@@ -124,6 +148,7 @@ body {
 
 .row .customer {
   display: flex;
+  margin-top: 16px;
   padding: 28px;
   align-items: center;
   justify-content: center;
@@ -150,16 +175,14 @@ body {
 /* Forms Start */
 .row .forms {
   display: flex;
-  max-width: 43%;
 }
 
 .row .forms .customer-form {
-  max-width: 75%;
+  width: 420px;
   height: 100%;
-  margin: auto;
   border-radius: 10px;
   background-color: #f2f2f2;
-  padding: 32px 48px;
+  padding: 16px 28px;
 }
 
 .row .forms .customer-form h3 {
@@ -168,12 +191,12 @@ body {
 }
 
 .row .forms .customer-form p {
-  font-size: 18px;
-  margin-bottom: 24px;
+  font-size: 16px;
+  margin-bottom: 20px;
 }
 
 .row .forms .customer-form label {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 700;
 }
 
@@ -181,11 +204,11 @@ body {
 #interest {
   display: inline-block;
   width: 100%;
-  padding: 12px 20px;
+  padding: 12px 18px;
   margin: 8px 0 24px;
   border: 1px solid #d2d2d2;
   border-radius: 8px;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .row .forms .customer-form input[type="submit"] {
@@ -207,21 +230,41 @@ body {
 
 /* Our Package Start */
 .our-package {
-  display: inline-block;
-  width: 57%;
-}
-
-.our-package .container {
-  display: block;
-}
-
-.our-package .container .benefit {
   display: flex;
-  padding: 16px 96px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 42px;
+}
+
+.our-package .service {
+  display: inline-block;
+  width: 840px;
+  padding-right: 28px;
+}
+
+.our-package .service p {
+  text-align: left;
+}
+
+.our-package .page-block {
+  display: flex;
+  width: 440px;
+  height: 100%;
+  padding: 0 4px 0 22px;
+}
+
+.our-package .service .container {
+  display: inline-block;
+}
+
+.our-package .service .container .benefit {
+  display: flex;
+  width: 840px;
+  padding: 16px 0;
   align-items: center;
 }
 
-.our-package .container .benefit .number {
+.our-package .service .container .benefit .number {
   padding: 8px;
   height: 52px;
   width: 52px;
@@ -232,12 +275,102 @@ body {
   font-size: 26px;
 }
 
-.our-package .service {
-  display: inline-block;
-  margin: 24px 24px 24px 32px;
-}
-
-.our-package .service p {
-  text-align: left;
+.our-package .service .container .benefit .feature {
+  padding: 0 12px;
 }
 /* Our Package End */
+
+/* Footer Start */
+footer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #2e2e2e;
+  border-top: 1px solid #010101;
+  margin-top: 48px;
+  padding: 18px 32px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 998;
+}
+
+footer .credit p {
+  color: #fff;
+}
+footer .credit a {
+  font-weight: 400;
+  color: #fff;
+}
+/* Footer End */
+
+/* Media Query */
+/* Phone */
+@media (max-width: 600px) {
+  .navbar .navbar-menu a {
+    font-size: 12px;
+    padding: 4px;
+  }
+  html {
+    font-size: 12px;
+  }
+  .home h1 {
+    font-size: 20px;
+  }
+  .home h2 {
+    font-size: 14px;
+  }
+  .row .content .slide-img img {
+    width: 80%;
+    height: 80%;
+  }
+
+  .row .content .slide-img .button {
+    font-size: 10px;
+    padding: 6px 12px;
+  }
+
+  .row .content .slide-img h3 {
+    font-size: 14px;
+    line-height: 24px;
+  }
+  .our-package .service {
+    width: 80%;
+    font-size: 12px;
+  }
+  .our-package .page-block {
+    display: none;
+  }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+  .home h1 {
+    font-size: 28px;
+  }
+  .home h2 {
+    font-size: 16px;
+  }
+
+  .row .content .slide-img img {
+    width: 90%;
+    height: 90%;
+  }
+  row .content .slide-img h3 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .our-package .service {
+    width: 90%;
+    font-size: 16px;
+  }
+  .our-package .page-block {
+    display: none;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+/* @media only screen and (min-width: 1200px) {...}  */
